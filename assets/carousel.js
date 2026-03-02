@@ -37,7 +37,7 @@ function startAutoPlay() {
     autoPlayInterval = setInterval(() => {
         let nextIndex = (currentIndex + 1) % slides.length;
         updateCarousel(nextIndex);
-    }, 6000);
+    }, 9000);
 }
 
 function resetAutoPlay() {
