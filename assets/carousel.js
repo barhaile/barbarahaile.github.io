@@ -32,12 +32,12 @@ dots.forEach((dot, index) => {
 // Recalculate widths on window resize so the alignment doesn't break
 window.addEventListener('resize', () => updateCarousel(currentIndex));
 
-// Optional: Auto-play functionality (slides every 6 seconds)
+// Optional: Auto-play functionality (slides every 8 seconds)
 function startAutoPlay() {
     autoPlayInterval = setInterval(() => {
         let nextIndex = (currentIndex + 1) % slides.length;
         updateCarousel(nextIndex);
-    }, 9000);
+    }, 8000);
 }
 
 function resetAutoPlay() {
