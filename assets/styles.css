@@ -127,33 +127,31 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 .hero-orb-1{position:absolute;top:-160px;right:-120px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(0,180,216,.12) 0%,transparent 65%);pointer-events:none}
 .hero-orb-2{position:absolute;bottom:-120px;left:-80px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle at 60% 60%,rgba(155,127,232,.10) 0%,transparent 65%);pointer-events:none}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
-/* ── Desktop Override: Match Image Height to Text Height ── */
+/* ── Desktop Override: Bulletproof Image Size ── */
 @media(min-width: 900px) {
     .hero-grid {
         grid-template-columns: 1fr 1fr;
         gap: 80px;
-        align-items: stretch; /* Forces both left and right columns to be the exact same height */
+        align-items: center; /* Back to center so it aligns beautifully with the text */
     }
     .hero-photo-wrap {
         display: block;
-        background: rgba(255,255,255,.6);
         margin-top: 0;
-        height: 100%; /* Tells the wrap to match the grid column height */
     }
     .hero-photo-frame {
         width: 100%;
-        height: 100%; /* Tells the frame to fill the wrap */
+        height: 500px; /* 🚨 THIS IS THE MAGIC FIX: A hard cap on height */
         border-radius: var(--r-xl); 
         border: none;               
         box-shadow: var(--shadow-lg);
     }
     .hero-photo-frame img {
         width: 100%;
-        height: 100%; /* Image now matches the text height exactly */
-        aspect-ratio: auto; /* Overrides the old 3/4 ratio so it doesn't force a huge height */
-        object-fit: cover; /* Crops the image beautifully to fit the new height without squishing */
-        object-position: center 20%; /* Keeps Barbara's face in the frame */
-        padding-top: 0; /* Removes the old gap at the top */
+        height: 100%; 
+        aspect-ratio: auto;
+        object-fit: cover; /* Crops it nicely into the 500px box */
+        object-position: center top; /* Keeps Barbara's face in the center of the crop */
+        padding-top: 0;
     }
 }
 .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:24px}
