@@ -132,17 +132,16 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 .hero-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--violet));flex-shrink:0}
 .hero-eyebrow-text{font-family:var(--font-body);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:none;color:var(--muted)}
 /* ── Hero Headline (Mobile First: Forced Large Size) ── */
-.hero-headline {
-    margin-bottom: 8px;
-    font-size: 3.5rem; /* Guaranteed large size for mobile (approx 56px) */
-    line-height: 1.05;
-    letter-spacing: -0.03em;
+/* ── FORCE HERO HEADLINE SIZE ON MOBILE ── */
+h1.hero-headline {
+    font-size: 3.5rem !important; /* Forces a massive size on mobile (approx 56px) */
+    line-height: 1.05 !important;
+    letter-spacing: -0.03em !important;
 }
 
-/* ── Desktop Override: Fluid scaling ── */
 @media(min-width: 768px) {
-    .hero-headline {
-        font-size: clamp(3.5rem, 6vw, 4.5rem); /* Scales smoothly on larger screens */
+    h1.hero-headline {
+        font-size: clamp(3.5rem, 6vw, 4.5rem) !important;
     }
 }
 .hero-headline-sub{font-family:var(--font-head);font-size:clamp(1.1rem,2vw,1.5rem);font-weight:700;color:var(--muted);margin-bottom:24px;letter-spacing:-.01em}
