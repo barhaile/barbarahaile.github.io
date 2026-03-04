@@ -127,7 +127,13 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 .hero-orb-1{position:absolute;top:-160px;right:-120px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(0,180,216,.12) 0%,transparent 65%);pointer-events:none}
 .hero-orb-2{position:absolute;bottom:-120px;left:-80px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle at 60% 60%,rgba(155,127,232,.10) 0%,transparent 65%);pointer-events:none}
 .hero-grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
-@media(min-width:900px){.hero-grid{grid-template-columns:1fr 1fr;gap:80px}}
+@media(min-width:900px){
+    .hero-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 80px;
+        align-items: flex-start; /* This pins the photo to the top, aligning with the eyebrow */
+    }
+}
 .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:24px}
 .hero-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--violet));flex-shrink:0}
 .hero-eyebrow-text{font-family:var(--font-body);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:none;color:var(--muted)}
