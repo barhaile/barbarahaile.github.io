@@ -412,28 +412,30 @@ h1.hero-headline {
 /* PayPal style */
 .company-card {padding: 0 3em 0 1em;}
 
+
 /* ── TESTIMONIAL */
-#testimonial{background:linear-gradient(135deg,rgba(0,180,216,.06),rgba(155,127,232,.06));border-top:1px solid var(--border);border-bottom:1px solid var(--border);padding:88px 0}
+#testimonial{
+    background:linear-gradient(135deg,rgba(0,180,216,.06),rgba(155,127,232,.06));
+    border-top:1px solid var(--border);
+    border-bottom:1px solid var(--border);
+    padding:56px 0; /* Reduced from 88px for mobile */
+}
 .quote-marks{font-family:var(--font-head);font-size:5rem;font-weight:900;line-height:.6;background:linear-gradient(135deg,var(--teal),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:24px;user-select:none}
 .t-quote{font-family:var(--font-head);font-size:clamp(1.4rem,2.3vw,1.75rem);font-weight:700;color:var(--ink);line-height:1.45;letter-spacing:-.02em;margin-bottom:32px}
 .t-name{font-family:var(--font-head);font-weight:800;font-size:.95rem;color:var(--ink);display:block;letter-spacing:-.01em}
 .t-role{font-size:.82rem;color:var(--muted);display:block}
+
 /* 1. The Container */
 .testimonial-container {
   display: grid;
   grid-template-columns: 1fr;
   align-items: center;    /* Vertical centering */
   justify-items: center; /* Horizontal centering */
-  min-height: auto;      /* Ensure this is tall enough for the longest text */
+  min-height: auto;      
   margin: 0 auto;
   max-width: 800px;
   position: relative;
-  padding-bottom: 30px; 
-}
-@media(min-width: 768px) {
-    .testimonial-container {
-        min-height: 400px;
-    }
+  /* Removed padding-bottom: 30px to fix mobile spacing */
 }
 
 /* 2. The Testimonials */
@@ -463,7 +465,7 @@ h1.hero-headline {
     max-width: 800px;
     overflow: hidden;
     position: relative;
-    padding: 40px 0;
+    padding: 16px 0 0 0; /* Reduced top padding, removed bottom padding */
 }
 
 .carousel-track {
@@ -490,7 +492,7 @@ h1.hero-headline {
     display: flex;
     justify-content: center;
     gap: 12px;
-    margin-top: 40px;
+    margin-top: 24px; /* Reduced from 40px for mobile */
 }
 
 .nav-dot {
@@ -511,6 +513,19 @@ h1.hero-headline {
 
 .nav-dot:hover:not(.active) {
     background-color: #b0b0b0;
+}
+
+/* Desktop Overrides */
+@media(min-width: 768px) {
+    #testimonial {
+        padding: 88px 0; /* Restores large padding on desktop */
+    }
+    .testimonial-container {
+        min-height: 400px;
+    }
+    .carousel-nav {
+        margin-top: 40px; /* Restores large spacing on desktop */
+    }
 }
 
 /* Responsive */
