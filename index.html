@@ -32,16 +32,12 @@
   <link rel="stylesheet" href="assets/styles.css" />
   <link rel="icon" href="assets/favicon/favicon.svg" type="image/svg+xml">
   <link rel="icon" type="image/png" sizes="96x96" href="assets/favicon/favicon-96x96.png">  
-  <!-- Apple Touch Icon (no gloss effect) -->  
   <link rel="apple-touch-icon" sizes="180x180" href="assets/favicon/apple-touch-icon.png">  
-  <!-- Safari Mask Icon (for pinned tabs) -->  
   <link rel="mask-icon" href="assets/favicon/favicon.svg" color="#1a73e8"> 
   <link rel="icon" href="assets/favicon/favicon.ico" sizes="any">
   <link rel="icon" type="image/x-icon" href="/favicon.ico">  
-  <!-- Legacy support (optional but safe) -->  
   <link rel="shortcut icon" href="/favicon.ico">  
   <link rel="webmanifest" href="/assets/favicon/site.webmanifest"> 
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-19BXRHCVYS"></script>
   <script>
   window.dataLayer = window.dataLayer || [];
@@ -53,23 +49,29 @@
 </head>
 <body>
 
-<!-- NAV -->
 <nav id="main-nav" role="navigation" aria-label="Main navigation">
   <div class="container">
     <div class="nav-inner">
       <a href="#hero" class="nav-logo"><span>Barbara Haile</span></a>
      
-        <ul class="nav-links" role="list">
-          <li class="nav-item"><a href="#services">Services</a></li>
-          <li class="nav-item"><a href="#about">About</a></li>
-          <li class="nav-item"><a href="#faq">FAQs</a></li>
-          <li class="nav-btn"><a href="https://calendar.app.google/tpzvaQZDW3Z5KjvY8" class="btn btn-teal nav-cta" style="padding:11px 22px;font-size:.82rem;" target="_blank" rel="noopener">Book a 20-min call</a></li> 
-        </ul>
+      <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+          </svg>
+      </button>
+
+      <ul class="nav-links" role="list">
+        <li class="nav-item"><a href="#services">Services</a></li>
+        <li class="nav-item"><a href="#about">About</a></li>
+        <li class="nav-item"><a href="#faq">FAQs</a></li>
+        <li class="nav-btn"><a href="https://calendar.app.google/tpzvaQZDW3Z5KjvY8" class="btn btn-teal nav-cta" style="padding:11px 22px;font-size:.82rem;" target="_blank" rel="noopener">Book a 20-min call</a></li> 
+      </ul>
     </div>
   </div>
 </nav>
 
-<!-- HERO -->
 <section id="hero" aria-label="Hero">
   <div class="hero-orb-1" aria-hidden="true"></div>
   <div class="hero-orb-2" aria-hidden="true"></div>
@@ -115,7 +117,6 @@
   </div>
 </section>
 
-<!-- CHALLENGE -->
 <section id="challenge" aria-labelledby="challenge-heading">
   <div class="container">
     <div class="challenge-header reveal">
@@ -152,7 +153,6 @@
   </div>
 </section>
 
-<!-- APPROACH -->
 <section id="approach" aria-labelledby="approach-heading">
   <div class="container">
     <div class="approach-intro">
@@ -193,7 +193,6 @@
   </div>
 </section>
 
-<!-- FOR WHOM -->
 <section id="for-whom" aria-labelledby="forwho-heading">
   <div class="container">
     <div class="forwho-header reveal">
@@ -253,7 +252,6 @@
   </div>
 </section>
 
-<!-- SERVICES -->
 <section id="services" aria-labelledby="services-heading">
   <div class="container">
     <div class="services-intro reveal">
@@ -345,7 +343,6 @@
   </div>
 </section>
 
-<!-- ABOUT -->
 <section id="about" aria-labelledby="about-h">
   <div class="container">
     <div class="about-intro reveal">
@@ -397,7 +394,6 @@
 
 </section>
 
-<!-- TESTIMONIAL -->
 <section id="testimonial" aria-label="Client testimonial">
   <div class="testimonial-container">      
     <div class="carousel-container">
@@ -435,7 +431,6 @@
   </div>
 </section>
 
-<!-- FAQ -->
 <section id="faq" aria-labelledby="faq-heading">
   <div class="container">
     <div class="faq-intro reveal">
@@ -489,7 +484,6 @@
   </div>
 </section>
 
-<!-- CONTACT -->
 <section id="contact" aria-labelledby="contact-heading">
   <div class="container">
     <div class="contact-intro reveal">
@@ -535,7 +529,6 @@
         <p>20 minutes, no agenda, no pressure. I'll ask you the right questions to understand exactly where you are.</p>
         <div class="cal-block">
           <p>Pick a time that works for youm, usually within 3 business days.</p>
-          <!-- REPLACE with your Calendly URL -->
           <a href="https://calendar.app.google/tpzvaQZDW3Z5KjvY8" target="_blank" rel="noopener" class="btn btn-teal" style="width:100%;justify-content:center;">
             <svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16" aria-hidden="true"><rect x="2" y="2" width="12" height="12" rx="1.5"/><path d="M2 6h12M6 2v4M10 2v4"/></svg>
             Book a 20-min call
@@ -549,13 +542,12 @@
   </div>
 </section>
 
-<!-- FOOTER -->
 <footer>
   <div class="container">
     <div class="footer-inner">
       <span class="footer-logo"><a href="#hero" class="nav-logo"><span>Barbara Haile</span></a></span>
        <span class="footer-links">
-          <a href="https://linkedin.com/in/barbarahaile" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="white" width="16" height="16" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
+          <a href="https://linkedin.com/in/barbarahaile" target="_blank" rel="noopener" title="Visit Barbara Haile on LinkedIn"><svg viewBox="0 0 24 24" fill="white" width="16" height="16" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 01-2.063-2.065 2.064 2.064 0 112.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg></a>
         </span>
       
       <p>© 2026 &middot; Barbara Haile</p>
@@ -577,9 +569,30 @@
 
   // Testimonial carousel
   document.addEventListener("DOMContentLoaded", function() {
+  const navToggle = document.querySelector('.nav-toggle');
+  const navLinks = document.querySelector('.nav-links');
   const testimonials = document.querySelectorAll('.testimonial-wrap');
   let currentIndex = 0;
+  if (navToggle && navLinks) {
+      navToggle.addEventListener('click', () => {
+          // Toggle the menu open/closed
+          navLinks.classList.toggle('is-open');
+          
+          // Update the aria-expanded attribute for accessibility
+          const isExpanded = navToggle.getAttribute('aria-expanded') === 'true';
+          navToggle.setAttribute('aria-expanded', !isExpanded);
+      });
 
+      // Optional but highly recommended: Close menu when a link is clicked
+      const links = navLinks.querySelectorAll('a');
+      links.forEach(link => {
+          link.addEventListener('click', () => {
+              navLinks.classList.remove('is-open');
+              navToggle.setAttribute('aria-expanded', 'false');
+          });
+      });
+  }
+  
   if (testimonials.length > 0) {
     // 1. Clear any accidental "active" classes and set the first one
     testimonials.forEach(t => t.classList.remove('active'));
