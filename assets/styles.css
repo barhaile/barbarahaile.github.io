@@ -150,21 +150,6 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 .sq-logo{color:#1A1A2E}
 
 /* Hero visual card */
-.hero-photo-wrap {position: relative;background: rgba(255,255,255,.6);}
-.hero-visual{position:relative}
-.hero-card{background:var(--surface);border-radius:var(--r-xl);padding:36px;box-shadow:var(--shadow-lg);border:1px solid var(--border);position:relative;overflow:hidden}
-.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--violet))}
-.hero-card-header{display:flex;align-items:center;gap:16px;margin-bottom:28px}
-.hero-photo-frame{border-radius: var(--r-xl);overflow: hidden;position: relative;box-shadow: var(--shadow-lg);}
-.hero-photo-frame img{width: 100%;padding-top: 15px;aspect-ratio: 3/4;object-fit: fill;display: block;image-rendering: crisp-edges;}
-.hero-photo-badge {position: absolute;bottom: 24px;left: 24px;right: 24px;padding: 16px 20px;z-index: 2;}
-.hero-card-name{font-family:var(--font-head);font-weight:800;font-size:1.05rem;color:var(--ink);letter-spacing:-.01em}
-.hero-card-title{font-size:.82rem;color:var(--muted);font-weight:400}
-.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.stat{padding:18px 20px;background:var(--bg);border-radius:var(--r-md);border:1px solid var(--border)}
-.stat-num{font-family:var(--font-head);font-size:2.5rem;font-weight:900;line-height:1;letter-spacing:-.03em;background:linear-gradient(135deg,var(--teal),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
-.stat-label{font-size:.8rem;color:var(--muted);line-height:1.3}
-.stat-box{background:var(--bg);border-radius:var(--r-md);border: 1px solid var(--border);padding:18px 20px;-webkit-backdrop-filter: blur(5px);backdrop-filter: blur(5px);z-index: 2;}
 /* ── Hero visual card (Mobile First: Circular & Smaller) ── */
 .hero-photo-wrap {
     position: relative;
@@ -213,6 +198,19 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
         image-rendering: crisp-edges;
     }
 }
+.hero-visual{position:relative}
+.hero-card{background:var(--surface);border-radius:var(--r-xl);padding:36px;box-shadow:var(--shadow-lg);border:1px solid var(--border);position:relative;overflow:hidden}
+.hero-card::before{content:'';position:absolute;top:0;left:0;right:0;height:4px;background:linear-gradient(90deg,var(--teal),var(--violet))}
+.hero-card-header{display:flex;align-items:center;gap:16px;margin-bottom:28px}
+.hero-photo-badge {position: absolute;bottom: 24px;left: 24px;right: 24px;padding: 16px 20px;z-index: 2;}
+.hero-card-name{font-family:var(--font-head);font-weight:800;font-size:1.05rem;color:var(--ink);letter-spacing:-.01em}
+.hero-card-title{font-size:.82rem;color:var(--muted);font-weight:400}
+.stat-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.stat{padding:18px 20px;background:var(--bg);border-radius:var(--r-md);border:1px solid var(--border)}
+.stat-num{font-family:var(--font-head);font-size:2.5rem;font-weight:900;line-height:1;letter-spacing:-.03em;background:linear-gradient(135deg,var(--teal),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
+.stat-label{font-size:.8rem;color:var(--muted);line-height:1.3}
+.stat-box{background:var(--bg);border-radius:var(--r-md);border: 1px solid var(--border);padding:18px 20px;-webkit-backdrop-filter: blur(5px);backdrop-filter: blur(5px);z-index: 2;}
+
 /* ── CHALLENGE SECTION */
 #challenge{background:var(--ink);color:#fff;position:relative;overflow:hidden}
 #challenge::after{content:'';position:absolute;bottom:-200px;right:-200px;width:600px;height:600px;border-radius:50%;background:radial-gradient(circle,rgba(0,180,216,.12) 0%,transparent 65%);pointer-events:none}
