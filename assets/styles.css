@@ -134,7 +134,38 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 .hero-headline{margin-bottom:8px}
 .hero-headline-sub{font-family:var(--font-head);font-size:clamp(1.1rem,2vw,1.5rem);font-weight:700;color:var(--muted);margin-bottom:24px;letter-spacing:-.01em}
 .hero-sub{font-size:clamp(1rem,1.4vw,1.12rem);color:var(--muted);margin-bottom:36px;max-width:520px;line-height:1.75;font-weight:300;padding-top: 2rem;}
-.hero-actions{display:flex;flex-wrap:wrap;gap:12px;margin-bottom:48px}
+/* ── Hero Actions (Mobile First: Side-by-side) ── */
+.hero-actions {
+    display: flex;
+    flex-wrap: nowrap; /* Forces buttons onto one line */
+    gap: 8px;          /* Slightly tighter gap for small screens */
+    margin-bottom: 48px;
+    width: 100%;
+}
+
+.hero-actions .btn {
+    flex: 1;                 /* Makes both buttons take up exactly 50% of the space */
+    justify-content: center; /* Centers the text and icon */
+    padding: 12px 8px;       /* Tighter padding to fit the text */
+    font-size: 0.75rem;      /* Smaller text so the long labels fit */
+    white-space: normal;     /* Allows text to wrap tightly inside the button if on a very small phone */
+    text-align: center;
+}
+
+/* ── Desktop Override: Return to their natural, larger sizes ── */
+@media(min-width: 640px) {
+    .hero-actions {
+        flex-wrap: wrap;
+        gap: 12px;
+        width: auto;
+    }
+    .hero-actions .btn {
+        flex: none;          /* Removes the 50/50 split */
+        padding: 15px 30px;  /* Restores the large, luxurious padding */
+        font-size: 0.88rem;  /* Restores the larger font size */
+        white-space: nowrap;
+    }
+}
 .hero-trust{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .hero-trust-label{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
 .hero-trust-logos{display:flex;align-items:center;gap:6px;flex-wrap:wrap}
