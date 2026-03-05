@@ -194,6 +194,13 @@ h1.hero-headline {
 
 /* Hero visual card */
 /* ── Hero visual card (Mobile First: Circular & Smaller) ── */
+@media (max-width: 768px) {
+  .hero-grid { display: flex; flex-direction: column; }
+  .hero-eyebrow { order: 1; }
+  .hero-photo-wrap { order: 2; } 
+  .hero-left { order: 3; }
+}
+
 .hero-photo-wrap {
   position: relative;
   display: flex;
@@ -205,11 +212,10 @@ h1.hero-headline {
 .hero-photo-frame {
   width: 220px;          /* Reduced size for mobile */
   height: 220px;         /* Equal height for a perfect circle */
-  border-radius: 50%;    /* Makes it a circle */
+  border-radius: 28px;    /* Makes it a circle */
   overflow: hidden;
   position: relative;
   box-shadow: var(--shadow-md);
-  border: 4px solid var(--teal); /* Your blue/teal brand color */
 }
 
 .hero-photo-frame img {
@@ -218,12 +224,6 @@ h1.hero-headline {
   object-fit: cover;     /* Ensures the image fills the circle perfectly */
   object-position: center top; /* Focuses on the face/top of the image */
   display: block;
-    -webkit-mask-position: center;
-    mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: auto;
-  mask-size: auto;
 }
 /* ── Desktop Override: Bulletproof Image Size ── */
 @media(min-width: 900px) {
@@ -246,14 +246,6 @@ h1.hero-headline {
   .hero-photo-frame img {
       width: 100%;
       height: 100%;
-    -webkit-mask-position: center;
-    mask-position: center;
-  -webkit-mask-repeat: no-repeat;
-  mask-repeat: no-repeat;
-  -webkit-mask-size: auto;
-  mask-size: auto;
-
-
       aspect-ratio: auto;
       object-fit: cover; /* Crops it nicely into the 500px box */
       object-position: center top; /* Keeps Barbara's face in the center of the crop */
