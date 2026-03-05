@@ -1,28 +1,28 @@
 :root {
-    --teal:       #00B4D8;
-    --teal-dark:  #0096B7;
-    --teal-lt:    #E0F7FC;
-    --violet:     #9B7FE8;
-    --violet-lt:  #F0ECFC;
-    --violet-dark:#7C62C8;
-    --ink:        #0F1117;
-    --ink-2:      #2D3142;
-    --muted:      #6B7280;
-    --faint:      #9CA3AF;
-    --bg:         #F8FAFC;
-    --surface:    #FFFFFF;
-    --border:     #E5E9F0;
-    --border-2:   #D1D9E6;
-    --font-head:  'DM Serif Display', Georgia, serif;
-    --font-body:  'DM Sans', system-ui, sans-serif;
-    --r-sm: 8px;
-    --r-md: 14px;
-    --r-lg: 22px;
-    --r-xl: 32px;
-    --shadow-sm: 0 1px 4px rgba(15,17,23,.07);
-    --shadow-md: 0 6px 24px rgba(15,17,23,.10);
-    --shadow-lg: 0 16px 48px rgba(15,17,23,.13);
-    --t: 230ms cubic-bezier(.4,0,.2,1);
+  --teal:       #00B4D8;
+  --teal-dark:  #0096B7;
+  --teal-lt:    #E0F7FC;
+  --violet:     #9B7FE8;
+  --violet-lt:  #F0ECFC;
+  --violet-dark:#7C62C8;
+  --ink:        #0F1117;
+  --ink-2:      #2D3142;
+  --muted:      #6B7280;
+  --faint:      #9CA3AF;
+  --bg:         #F8FAFC;
+  --surface:    #FFFFFF;
+  --border:     #E5E9F0;
+  --border-2:   #D1D9E6;
+  --font-head:  'DM Serif Display', Georgia, serif;
+  --font-body:  'DM Sans', system-ui, sans-serif;
+  --r-sm: 8px;
+  --r-md: 14px;
+  --r-lg: 22px;
+  --r-xl: 32px;
+  --shadow-sm: 0 1px 4px rgba(15,17,23,.07);
+  --shadow-md: 0 6px 24px rgba(15,17,23,.10);
+  --shadow-lg: 0 16px 48px rgba(15,17,23,.13);
+  --t: 230ms cubic-bezier(.4,0,.2,1);
 }
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth;font-size:16px}
@@ -60,10 +60,10 @@ p{color:var(--muted);line-height:1.7}
 
 /* Prevent sticky hovers on mobile */
 @media (hover: hover) {
-    .btn-primary:hover{background:var(--ink-2);transform:translateY(-2px);box-shadow:var(--shadow-md)}
-    .btn-teal:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,180,216,.30)}
-    .btn-violet:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(155,127,232,.30)}
-    .btn-outline:hover{border-color:var(--ink);transform:translateY(-2px)}
+  .btn-primary:hover{background:var(--ink-2);transform:translateY(-2px);box-shadow:var(--shadow-md)}
+  .btn-teal:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(0,180,216,.30)}
+  .btn-violet:hover{transform:translateY(-2px);box-shadow:0 8px 24px rgba(155,127,232,.30)}
+  .btn-outline:hover{border-color:var(--ink);transform:translateY(-2px)}
 }
 
 /* ── TAG PILL */
@@ -85,16 +85,16 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 
 /* Mobile Menu State */
 .nav-links.is-open {
-    display: flex;
-    flex-direction: column;
-    position: absolute;
-    top: 100%;
-    left: 0;
-    right: 0;
-    background: var(--surface);
-    padding: 24px;
-    box-shadow: var(--shadow-md);
-    border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: var(--surface);
+  padding: 24px;
+  box-shadow: var(--shadow-md);
+  border-bottom: 1px solid var(--border);
 }
 
 @media(min-width:768px){.nav-links{display:flex; position: static; flex-direction: row; padding: 0; box-shadow: none; border: none; background: transparent;}}
@@ -109,20 +109,20 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 
 /* Hamburger Toggle Button */
 .nav-toggle {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--ink);
-    padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink);
+  padding: 8px;
 }
 @media(min-width: 768px) {
-    .nav-toggle { display: none; }
+  .nav-toggle { display: none; }
 }
 
 /* ── HERO */
 #hero{min-height:80svh;display:flex;align-items:center;padding-top:100px;position:relative;overflow:hidden;background:#fff}
 @media(min-width: 768px) {
-    #hero { padding-top: 150px; }
+  #hero { padding-top: 150px; }
 }
 .hero-orb-1{position:absolute;top:-160px;right:-120px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(0,180,216,.12) 0%,transparent 65%);pointer-events:none}
 .hero-orb-2{position:absolute;bottom:-120px;left:-80px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle at 60% 60%,rgba(155,127,232,.10) 0%,transparent 65%);pointer-events:none}
@@ -134,49 +134,49 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 /* ── Hero Headline (Mobile First: Forced Large Size) ── */
 /* ── FORCE HERO HEADLINE SIZE ON MOBILE ── */
 h1.hero-headline {
-    font-size: 3.5rem !important; /* Forces a massive size on mobile (approx 56px) */
-    line-height: 1.05 !important;
-    letter-spacing: -0.03em !important;
+  font-size: 3.5rem !important; /* Forces a massive size on mobile (approx 56px) */
+  line-height: 1.05 !important;
+  letter-spacing: -0.03em !important;
 }
 
 @media(min-width: 768px) {
-    h1.hero-headline {
-        font-size: clamp(3rem, 5vw, 4rem) !important;
-    }
+  h1.hero-headline {
+      font-size: clamp(3rem, 5vw, 4rem) !important;
+  }
 }
 .hero-headline-sub{font-family:var(--font-head);font-size:clamp(1.1rem,2vw,1.5rem);font-weight:700;color:var(--muted);margin-bottom:24px;letter-spacing:-.01em}
 .hero-sub{font-size:clamp(1rem,1.4vw,1.12rem);color:var(--muted);margin-bottom:36px;max-width:520px;line-height:1.75;font-weight:300;padding-top: 2rem;}
 /* ── Hero Actions (Mobile First: Side-by-side) ── */
 .hero-actions {
-    display: flex;
-    flex-wrap: nowrap; /* Forces buttons onto one line */
-    gap: 8px;          /* Slightly tighter gap for small screens */
-    margin-bottom: 48px;
-    width: 100%;
+  display: flex;
+  flex-wrap: nowrap; /* Forces buttons onto one line */
+  gap: 8px;          /* Slightly tighter gap for small screens */
+  margin-bottom: 48px;
+  width: 100%;
 }
 
 .hero-actions .btn {
-    flex: 1;                 /* Makes both buttons take up exactly 50% of the space */
-    justify-content: center; /* Centers the text and icon */
-    padding: 12px 8px;       /* Tighter padding to fit the text */
-    font-size: 0.75rem;      /* Smaller text so the long labels fit */
-    white-space: normal;     /* Allows text to wrap tightly inside the button if on a very small phone */
-    text-align: center;
+  flex: 1;                 /* Makes both buttons take up exactly 50% of the space */
+  justify-content: center; /* Centers the text and icon */
+  padding: 12px 8px;       /* Tighter padding to fit the text */
+  font-size: 0.75rem;      /* Smaller text so the long labels fit */
+  white-space: normal;     /* Allows text to wrap tightly inside the button if on a very small phone */
+  text-align: center;
 }
 
 /* ── Desktop Override: Return to their natural, larger sizes ── */
 @media(min-width: 640px) {
-    .hero-actions {
-        flex-wrap: wrap;
-        gap: 12px;
-        width: auto;
-    }
-    .hero-actions .btn {
-        flex: none;          /* Removes the 50/50 split */
-        padding: 15px 30px;  /* Restores the large, luxurious padding */
-        font-size: 0.88rem;  /* Restores the larger font size */
-        white-space: nowrap;
-    }
+  .hero-actions {
+      flex-wrap: wrap;
+      gap: 12px;
+      width: auto;
+  }
+  .hero-actions .btn {
+      flex: none;          /* Removes the 50/50 split */
+      padding: 15px 30px;  /* Restores the large, luxurious padding */
+      font-size: 0.88rem;  /* Restores the larger font size */
+      white-space: nowrap;
+  }
 }
 .hero-trust{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
 .hero-trust-label{font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--faint)}
@@ -195,56 +195,56 @@ h1.hero-headline {
 /* Hero visual card */
 /* ── Hero visual card (Mobile First: Circular & Smaller) ── */
 .hero-photo-wrap {
-    position: relative;
-    display: flex;
-    justify-content: center; /* Centers the circle on mobile */
-    background: transparent;
-    margin-top: 16px;
+  position: relative;
+  display: flex;
+  justify-content: center; /* Centers the circle on mobile */
+  background: transparent;
+  margin-top: 16px;
 }
 
 .hero-photo-frame {
-    width: 220px;          /* Reduced size for mobile */
-    height: 220px;         /* Equal height for a perfect circle */
-    border-radius: 50%;    /* Makes it a circle */
-    overflow: hidden;
-    position: relative;
-    box-shadow: var(--shadow-md);
-    border: 4px solid var(--teal); /* Your blue/teal brand color */
+  width: 220px;          /* Reduced size for mobile */
+  height: 220px;         /* Equal height for a perfect circle */
+  border-radius: 50%;    /* Makes it a circle */
+  overflow: hidden;
+  position: relative;
+  box-shadow: var(--shadow-md);
+  border: 4px solid var(--teal); /* Your blue/teal brand color */
 }
 
 .hero-photo-frame img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;     /* Ensures the image fills the circle perfectly */
-    object-position: center top; /* Focuses on the face/top of the image */
-    display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;     /* Ensures the image fills the circle perfectly */
+  object-position: center top; /* Focuses on the face/top of the image */
+  display: block;
 }
 /* ── Desktop Override: Bulletproof Image Size ── */
 @media(min-width: 900px) {
-    .hero-grid {
-        grid-template-columns: 1fr 1fr;
-        gap: 80px;
-        align-items: center; /* Back to center so it aligns beautifully with the text */
-    }
-    .hero-photo-wrap {
-        display: block;
-        margin-top: 0;
-    }
-    .hero-photo-frame {
-        width: 100%;
-        height: 500px; /* 🚨 THIS IS THE MAGIC FIX: A hard cap on height */
-        border-radius: var(--r-xl); 
-        border: none;               
-        box-shadow: var(--shadow-lg);
-    }
-    .hero-photo-frame img {
-        width: 100%;
-        height: 100%; 
-        aspect-ratio: auto;
-        object-fit: cover; /* Crops it nicely into the 500px box */
-        object-position: center top; /* Keeps Barbara's face in the center of the crop */
-        padding-top: 0;
-    }
+  .hero-grid {
+      grid-template-columns: 1fr 1fr;
+      gap: 80px;
+      align-items: center; /* Back to center so it aligns beautifully with the text */
+  }
+  .hero-photo-wrap {
+      display: block;
+      margin-top: 0;
+  }
+  .hero-photo-frame {
+      width: 100%;
+      height: 500px; /* 🚨 THIS IS THE MAGIC FIX: A hard cap on height */
+      border-radius: var(--r-xl); 
+      border: none;               
+      box-shadow: var(--shadow-lg);
+  }
+  .hero-photo-frame img {
+      width: 100%;
+      height: 100%; 
+      aspect-ratio: auto;
+      object-fit: cover; /* Crops it nicely into the 500px box */
+      object-position: center top; /* Keeps Barbara's face in the center of the crop */
+      padding-top: 0;
+  }
 }
 .hero-visual{position:relative}
 .hero-card{background:var(--surface);border-radius:var(--r-xl);padding:36px;box-shadow:var(--shadow-lg);border:1px solid var(--border);position:relative;overflow:hidden}
@@ -332,8 +332,8 @@ h1.hero-headline {
 
 /* Service Card Hover States restricted to non-touch */
 @media (hover: hover) {
-    .service-card:hover::before{height:4px}
-    .service-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px);border-color:transparent}
+  .service-card:hover::before{height:4px}
+  .service-card:hover{box-shadow:var(--shadow-lg);transform:translateY(-5px);border-color:transparent}
 }
 
 .service-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:100px;font-family:var(--font-head);font-size:.72rem;font-weight:700;letter-spacing:.06em;text-transform:uppercase;width:fit-content}
@@ -365,12 +365,12 @@ h1.hero-headline {
 @media(min-width:768px){.framework-steps{grid-template-columns:repeat(4,1fr)}}
 .framework-step{padding:36px 28px;position:relative;border-bottom:1px solid rgba(255,255,255,.08)}
 @media(min-width:768px){
-    .framework-step{border-bottom:none;border-right:1px solid rgba(255,255,255,.08)}
-    .framework-step:last-child{border-right:none}
+  .framework-step{border-bottom:none;border-right:1px solid rgba(255,255,255,.08)}
+  .framework-step:last-child{border-right:none}
 }
 .step-connector{display:none}
 @media(min-width:768px){
-    .framework-step:not(:last-child) .step-connector{display:flex;position:absolute;right:-12px;top:48px;width:24px;height:24px;background:var(--ink);z-index:2;align-items:center;justify-content:center;color:var(--teal)}
+  .framework-step:not(:last-child) .step-connector{display:flex;position:absolute;right:-12px;top:48px;width:24px;height:24px;background:var(--ink);z-index:2;align-items:center;justify-content:center;color:var(--teal)}
 }
 .step-bubble{width:52px;height:52px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-family:var(--font-head);font-size:1.2rem;font-weight:900;color:#fff;margin-bottom:20px;position:relative}
 .sb-teal{background:linear-gradient(135deg,var(--teal),var(--teal-dark))}
@@ -420,10 +420,10 @@ h1.hero-headline {
 
 /* ── TESTIMONIAL */
 #testimonial{
-    background:linear-gradient(135deg,rgba(0,180,216,.06),rgba(155,127,232,.06));
-    border-top:1px solid var(--border);
-    border-bottom:1px solid var(--border);
-    padding:56px 0; /* Reduced from 88px for mobile */
+  background:linear-gradient(135deg,rgba(0,180,216,.06),rgba(155,127,232,.06));
+  border-top:1px solid var(--border);
+  border-bottom:1px solid var(--border);
+  padding:56px 0; /* Reduced from 88px for mobile */
 }
 .quote-marks{font-family:var(--font-head);font-size:5rem;font-weight:900;line-height:.6;background:linear-gradient(135deg,var(--teal),var(--violet));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;display:block;margin-bottom:24px;user-select:none}
 .t-quote{font-family:var(--font-head);font-size:clamp(1.4rem,2.3vw,1.75rem);font-weight:700;color:var(--ink);line-height:1.45;letter-spacing:-.02em;margin-bottom:32px}
@@ -432,115 +432,115 @@ h1.hero-headline {
 
 /* 1. The Container */
 .testimonial-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  align-items: center;    /* Vertical centering */
-  justify-items: center; /* Horizontal centering */
-  min-height: auto;      
-  margin: 0 auto;
-  max-width: 800px;
-  position: relative;
-  /* Removed padding-bottom: 30px to fix mobile spacing */
+display: grid;
+grid-template-columns: 1fr;
+align-items: center;    /* Vertical centering */
+justify-items: center; /* Horizontal centering */
+min-height: auto;      
+margin: 0 auto;
+max-width: 800px;
+position: relative;
+/* Removed padding-bottom: 30px to fix mobile spacing */
 }
 
 /* 2. The Testimonials */
 .testimonial-wrap {
-  grid-area: 1 / 1 / 2 / 2; /* Forces all testimonials into the same grid square */
-  width: 100%;
-  opacity: 0;
-  visibility: hidden;
-  transition: opacity 5s ease-in-out, visibility 0.5s;
-  
-  /* Centering the text and author inside the wrap */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  text-align: center;
+grid-area: 1 / 1 / 2 / 2; /* Forces all testimonials into the same grid square */
+width: 100%;
+opacity: 0;
+visibility: hidden;
+transition: opacity 5s ease-in-out, visibility 0.5s;
+
+/* Centering the text and author inside the wrap */
+display: flex;
+flex-direction: column;
+align-items: center;
+text-align: center;
 }
 
 /* 3. The Active State */
 .testimonial-wrap.active {
-  opacity: 1;
-  visibility: visible;
-  z-index: 2;
+opacity: 1;
+visibility: visible;
+z-index: 2;
 }
 
 .carousel-container {
-    width: 100%;
-    max-width: 800px;
-    overflow: hidden;
-    position: relative;
-    padding: 16px 0 0 0; /* Reduced top padding, removed bottom padding */
+  width: 100%;
+  max-width: 800px;
+  overflow: hidden;
+  position: relative;
+  padding: 16px 0 0 0; /* Reduced top padding, removed bottom padding */
 }
 
 .carousel-track {
-    display: flex;
-    transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
-    will-change: transform;
+  display: flex;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
 }
 
 .testimonial-slide {
-    min-width: 100%;
-    box-sizing: border-box;
-    padding: 0 40px;
-    text-align: center;
-    opacity: 0.4;
-    transition: opacity 0.5s ease;
+  min-width: 100%;
+  box-sizing: border-box;
+  padding: 0 40px;
+  text-align: center;
+  opacity: 0.4;
+  transition: opacity 0.5s ease;
 }
 
 .testimonial-slide.active {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Navigation Dots */
 .carousel-nav {
-    display: flex;
-    justify-content: center;
-    gap: 12px;
-    margin-top: 24px; /* Reduced from 40px for mobile */
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 24px; /* Reduced from 40px for mobile */
 }
 
 .nav-dot {
-    width: 10px;
-    height: 10px;
-    border-radius: 50%;
-    border: none;
-    background-color: var(--dot-inactive);
-    cursor: pointer;
-    padding: 0;
-    transition: background-color 0.3s ease, transform 0.3s ease;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--dot-inactive);
+  cursor: pointer;
+  padding: 0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
 .nav-dot.active {
-    background-color: var(--dot-active);
-    transform: scale(1.2);
+  background-color: var(--dot-active);
+  transform: scale(1.2);
 }
 
 .nav-dot:hover:not(.active) {
-    background-color: #b0b0b0;
+  background-color: #b0b0b0;
 }
 
 /* Desktop Overrides */
 @media(min-width: 768px) {
-    #testimonial {
-        padding: 88px 0; /* Restores large padding on desktop */
-    }
-    .testimonial-container {
-        min-height: 400px;
-    }
-    .carousel-nav {
-        margin-top: 40px; /* Restores large spacing on desktop */
-    }
+  #testimonial {
+      padding: 88px 0; /* Restores large padding on desktop */
+  }
+  .testimonial-container {
+      min-height: 400px;
+  }
+  .carousel-nav {
+      margin-top: 40px; /* Restores large spacing on desktop */
+  }
 }
 
 /* Responsive */
 @media (max-width: 600px) {
-    .quote {
-        font-size: 1.25rem;
-    }
-    .testimonial-slide {
-        padding: 0 20px;
-    }
+  .quote {
+      font-size: 1.25rem;
+  }
+  .testimonial-slide {
+      padding: 0 20px;
+  }
 }
 
 /* ── FAQ */
@@ -550,8 +550,8 @@ h1.hero-headline {
 @media(min-width:768px){.faq-grid{grid-template-columns:1fr 1fr}}
 details.faq-item{border-bottom:1px solid var(--border);padding:0}
 @media(min-width:768px){
-    details.faq-item:nth-child(odd){padding-right:40px}
-    details.faq-item:nth-child(even){padding-left:40px;border-left:1px solid var(--border)}
+  details.faq-item:nth-child(odd){padding-right:40px}
+  details.faq-item:nth-child(even){padding-left:40px;border-left:1px solid var(--border)}
 }
 details summary{list-style:none;cursor:pointer;padding:26px 0;display:flex;justify-content:space-between;align-items:flex-start;gap:16px}
 details summary::-webkit-details-marker{display:none}
