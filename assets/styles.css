@@ -240,6 +240,9 @@ h1.hero-headline {
   .hero-photo-frame img {
       width: 100%;
       height: 100%; 
+      mask-position: center;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
       aspect-ratio: auto;
       object-fit: cover; /* Crops it nicely into the 500px box */
       object-position: center top; /* Keeps Barbara's face in the center of the crop */
