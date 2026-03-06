@@ -116,33 +116,33 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 }
 /* Stacks the logo and text perfectly 
 .nav-brand {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
-    gap: 2px; /* Controls the space between the logo and the text 
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2px; /* Controls the space between the logo and the text 
 }*/
 
 /* Mobile-first nav text sizing */
 .nav-text {
-    font-family: var(--font-body);
-    font-size: 0.65rem; /* Slightly smaller on mobile so it doesn't crowd the button */
-    font-weight: 600;
-    letter-spacing: 0.05em;
-    text-transform: none;
-    color: var(--muted);
-    line-height: 1;
+  font-family: var(--font-body);
+  font-size: 0.65rem; /* Slightly smaller on mobile so it doesn't crowd the button */
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: none;
+  color: var(--muted);
+  line-height: 1;
 }
 
 /* Restores full size on tablet/desktop */
 @media(min-width: 768px) {
-    .nav-text {
-        font-size: 0.78rem;
-        letter-spacing: 0.1em;
-        line-height: 0.7;
-    }
-    .nav-toggle { display: none; }
-    .nav-links {
+  .nav-text {
+    font-size: 0.78rem;
+    letter-spacing: 0.1em;
+    line-height: 0.7;
+  }
+  .nav-toggle { display: none; }
+  .nav-links {
     display:flex;
     position: static;
     flex-direction: row;
@@ -160,8 +160,12 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 }
 .hero-orb-1{position:absolute;top:-160px;right:-120px;width:640px;height:640px;border-radius:50%;background:radial-gradient(circle at 40% 40%,rgba(0,180,216,.12) 0%,transparent 65%);pointer-events:none}
 .hero-orb-2{position:absolute;bottom:-120px;left:-80px;width:480px;height:480px;border-radius:50%;background:radial-gradient(circle at 60% 60%,rgba(155,127,232,.10) 0%,transparent 65%);pointer-events:none}
-.hero-grid{display:grid;grid-template-columns:1fr;gap:56px;align-items:center}
-
+.hero-grid{
+  display:grid;
+  grid-template-columns:1fr;
+  gap:10px;
+  align-items:center;
+}
 .hero-eyebrow{display:flex;align-items:center;gap:10px;margin-bottom:24px}
 .hero-dot{width:8px;height:8px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--violet));flex-shrink:0}
 .hero-eyebrow-text{font-family:var(--font-body);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:none;color:var(--muted)}
@@ -228,13 +232,59 @@ h1.hero-headline {
 
 /* Hero visual card */
 /* ── Hero visual card (Mobile First: Circular & Smaller) ── */
-@media (max-width: 768px) {
-  .hero-grid { display: flex; flex-direction: column; }
-  .hero-eyebrow { order: 1; }
-  .hero-photo-wrap { order: 2; } 
-  .hero-left { order: 3; }
+
+/* ── Tighten Hero Text Spacing (Mobile First) ── */
+.hero-headline {
+    margin-bottom: 8px; 
 }
 
+.hero-sub {
+    padding-top: 0 !important; /* Strips out the old 2rem padding */
+    margin-top: 8px;           /* Small gap below the headline */
+    margin-bottom: 24px;       /* Reduced from 36px */
+}
+
+.hero-actions {
+    margin-top: 0;
+    margin-bottom: 32px;       /* Reduced from 48px */
+}
+/* ── Desktop Version (2 Columns) ── */
+@media (min-width: 769px) {
+  .hero-grid {
+    display: grid;
+    /* Creates 2 columns. Adjust the 1.2fr / 0.8fr to change the width balance */
+    grid-template-columns: 1.2fr 0.8fr; 
+    column-gap: 80px;
+    row-gap: 16px; /* Space between the text elements */
+    align-items: center;
+  }
+
+  /* Force all the text elements to stay in the Left Column */
+  .hero-headline,
+  .hero-sub,
+  .hero-actions {
+    grid-column: 1;
+    margin-bottom: 0; /* Remove old margins since row-gap handles spacing now */
+    margin-top: 0;
+    padding-top: 0 !important;
+  }
+
+  /* Force the photo into the Right Column and stretch it across all rows */
+  .hero-photo-wrap {
+    grid-column: 2;
+    grid-row: 1 / 5;
+    display: flex;
+    justify-content: flex-end; 
+    
+    /* 🚨 ADD THESE TWO LINES 🚨 */
+    align-self: flex-start; /* Pins the wrapper to the top of the grid column */
+    margin-top: 8px;        /* Optional: Tweak this number to perfectly align the top of the card with the top of your text */
+  }
+
+  .hero-actions {
+    margin-top: 8px; 
+  }
+}
 .hero-photo-wrap {
   position: relative;
   display: flex;
