@@ -114,14 +114,14 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
   color: var(--ink);
   padding: 8px;
 }
-/* Stacks the logo and text perfectly */
+/* Stacks the logo and text perfectly 
 .nav-brand {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     justify-content: center;
-    gap: 2px; /* Controls the space between the logo and the text */
-}
+    gap: 2px; /* Controls the space between the logo and the text 
+}*/
 
 /* Mobile-first nav text sizing */
 .nav-text {
