@@ -114,7 +114,6 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
   color: var(--ink);
   padding: 8px;
 }
-.nav-text{font-family:var(--font-body);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:none;color:var(--muted)}
 /* Stacks the logo and text perfectly */
 .nav-brand {
     display: flex;
@@ -132,7 +131,7 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
     letter-spacing: 0.05em;
     text-transform: none;
     color: var(--muted);
-    line-height: 1.2;
+    line-height: 1;
 }
 
 /* Restores full size on tablet/desktop */
@@ -140,6 +139,7 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
     .nav-text {
         font-size: 0.78rem;
         letter-spacing: 0.1em;
+        line-height: 0.7;
     }
     .nav-toggle { display: none; }
     .nav-links {
