@@ -97,7 +97,6 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
   border-bottom: 1px solid var(--border);
 }
 
-@media(min-width:768px){.nav-links{display:flex; position: static; flex-direction: row; padding: 0; box-shadow: none; border: none; background: transparent;}}
 
 .nav-item a{font-family:var(--font-body);font-size:.82rem;font-weight:600;color:var(--muted);letter-spacing:.02em;transition:color var(--t)}
 .nav-item a:hover{color:var(--ink)}
@@ -115,8 +114,43 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
   color: var(--ink);
   padding: 8px;
 }
+.nav-text{font-family:var(--font-body);font-size:.78rem;font-weight:600;letter-spacing:.1em;text-transform:none;color:var(--muted)}
+/* Stacks the logo and text perfectly */
+.nav-brand {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 2px; /* Controls the space between the logo and the text */
+}
+
+/* Mobile-first nav text sizing */
+.nav-text {
+    font-family: var(--font-body);
+    font-size: 0.65rem; /* Slightly smaller on mobile so it doesn't crowd the button */
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: none;
+    color: var(--muted);
+    line-height: 1.2;
+}
+
+/* Restores full size on tablet/desktop */
 @media(min-width: 768px) {
-  .nav-toggle { display: none; }
+    .nav-text {
+        font-size: 0.78rem;
+        letter-spacing: 0.1em;
+    }
+    .nav-toggle { display: none; }
+    .nav-links {
+    display:flex;
+    position: static;
+    flex-direction: row;
+    padding: 0;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+  }
 }
 
 /* ── HERO */
