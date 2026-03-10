@@ -172,16 +172,11 @@ nav.scrolled{background:rgba(248,250,252,.94);backdrop-filter:blur(14px);-webkit
 /* ── Hero Headline (Mobile First: Forced Large Size) ── */
 /* ── FORCE HERO HEADLINE SIZE ON MOBILE ── */
 h1.hero-headline {
-  font-size: 3.5rem !important; /* Forces a massive size on mobile (approx 56px) */
+  font-size: 2.8rem !important; /* Forces a massive size on mobile (approx 56px) */
   line-height: 1.05 !important;
-  letter-spacing: -0.03em !important;
+  letter-spacing: -0.04em !important;
 }
 
-@media(min-width: 768px) {
-  h1.hero-headline {
-      font-size: clamp(3rem, 5vw, 4rem) !important;
-  }
-}
 .hero-headline-sub{font-family:var(--font-head);font-size:clamp(1.1rem,2vw,1.5rem);font-weight:700;color:var(--muted);margin-bottom:24px;letter-spacing:-.01em}
 .hero-sub{font-size:clamp(1rem,1.4vw,1.12rem);color:var(--muted);margin-bottom:36px;max-width:520px;line-height:1.75;font-weight:300;padding-top: 2rem;}
 /* ── Hero Actions (Mobile First: Side-by-side) ── */
@@ -205,7 +200,7 @@ h1.hero-headline {
 /* ── Desktop Override: Return to their natural, larger sizes ── */
 @media(min-width: 640px) {
   .hero-actions {
-      flex-wrap: wrap;
+      /*flex-wrap: wrap;*/
       gap: 12px;
       width: auto;
   }
@@ -214,6 +209,12 @@ h1.hero-headline {
       padding: 15px 30px;  /* Restores the large, luxurious padding */
       font-size: 0.88rem;  /* Restores the larger font size */
       white-space: nowrap;
+  }
+}
+
+@media(min-width: 990px) {
+  h1.hero-headline {
+      font-size: clamp(3.6rem, 5vw, 4rem) !important;
   }
 }
 .hero-trust{display:flex;align-items:center;gap:18px;flex-wrap:wrap}
@@ -254,7 +255,7 @@ h1.hero-headline {
     display: grid;
     /* Creates 2 columns. Adjust the 1.2fr / 0.8fr to change the width balance */
     grid-template-columns: 1.2fr 0.8fr; 
-    column-gap: 80px;
+    column-gap: 65px;
     row-gap: 16px; /* Space between the text elements */
     align-items: center;
   }
@@ -313,7 +314,7 @@ h1.hero-headline {
 @media(min-width: 900px) {
   .hero-grid {
       grid-template-columns: 1fr 1fr;
-      gap: 80px;
+      gap: 60px;
       align-items: center; /* Back to center so it aligns beautifully with the text */
   }
   .hero-photo-wrap {
